@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #12295a;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    padding: 45vh 0 0;
+}
+
+.nav-list {
+    /* display: block; */
+    /* position: relative; */
+    border-bottom: 1px solid rgb(255, 255, 255, .2);
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+    /* box-shadow: 1px 1px 1px #ffffff; */
+
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 10px;
+    transition: all 300ms 0s ease;
+}
+
+.nav-link {
+    position: relative;
+    color: #ffffff;
+}
+
+.nav-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    filter: drop-shadow(0 0 10px #fff)
+    drop-shadow(0 0 20px #fff);
+    transition: all 300ms 0s ease;
+}
+
+.nav-item:nth-child(1)::before {
+    width: 0%;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+}
+
+.nav-item:nth-child(1):hover::before {
+    width: 100%;
+}
+
+.nav-item:nth-child(2)::before {
+    width: 4px;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+
+.nav-item:nth-child(2):hover::before {
+    height: 100%;
+}
+
+.nav-item:nth-child(3)::before {
+    width: 4px;
+    height: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.nav-item:nth-child(3):hover::before {
+    height: 100%;
+}
+
+/* My transition */
+
+.nav-item:nth-child(4)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    filter: drop-shadow(0 0 10px #fff)
+    drop-shadow(0 0 20px #fff);
+    transition: all 300ms 0s ease;
+}
+
+.nav-item:nth-child(4)::after {
+    width: 100%;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+}
+
+.nav-item:nth-child(4)::before {
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+}
+
+.nav-item:nth-child(4):hover {
+    background-color: #ffffff2d;
+}
+
+.nav-item:nth-child(4):hover::before {
+    top: 100%;
+}
+.nav-item:nth-child(4):hover::after {
+    bottom: 100%;
+}
+
